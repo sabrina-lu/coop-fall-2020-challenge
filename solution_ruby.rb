@@ -27,13 +27,6 @@ class EventSourcer
     bulk_redo(1)
   end
 
-  def output()
-    puts @value
-    puts @operations.to_s
-    puts @place
-    puts
-  end
-
   def bulk_undo(amount)
     interval = @place - amount
     if interval >= 0
